@@ -102,7 +102,6 @@ main {
   opacity: 0.4;
 }
 .project-details {
-  
   top: 0;
   left: 0;
   right: 0;
@@ -120,7 +119,8 @@ main {
   text-align: center;
 }
 
-.project-card:hover .project-details {
+.project-card:hover .project-details,
+.project-card.touch-active .project-details {
   opacity: 1;
   color: #64ffda;
 }
