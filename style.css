@@ -1,7 +1,9 @@
 :root {
+  --background-color: #0a192f;
+  --font-color: #f7f764;
   font-family: 'Inter', sans-serif;
-  background-color: #0a192f;
-  color: #8892b0;
+  background-color: var(--background-color);
+  color: var(--font-color);
 }
 
 @supports (font-variation-settings: normal) {
@@ -10,8 +12,6 @@
   }
 }
 
-
-
 body {
   margin: 2rem;
   background-color: var(--background-color);
@@ -19,8 +19,74 @@ body {
   border-left: solid 0.2rem #606060d2;
   border-right: solid 0.2rem #606060d2;
   transition: background-color var(--transition-time) ease-in-out, color var(--transition-time) ease-in-out, border-color var(--transition-time) ease-in-out;
- 
 }
+
+.switch {
+  --secondary-container: #3a4b39;
+  --primary: #84da89;
+  font-size: 10px;
+  position: relative;
+  display: inline-block;
+  width: 3.7em;
+  height: 1.8em;
+ }
+ 
+ .switch input {
+  display: none;
+  opacity: 0;
+  width: 0;
+  height: 0;
+ }
+ 
+ .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #313033;
+  transition: .2s;
+  border-radius: 30px;
+ }
+ 
+ .slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: #aeaaae;
+  transition: .4s;
+ }
+ 
+ input:checked + .slider::before {
+  background-color: var(--primary);
+ }
+ 
+ input:checked + .slider {
+  background-color: var(--secondary-container);
+ }
+ 
+ input:focus + .slider {
+  box-shadow: 0 0 1px var(--secondary-container);
+ }
+ 
+ input:checked + .slider:before {
+  transform: translateX(1.9em);
+ }
+
+
+
+nav{
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+
 
 main {
   display: flex;
