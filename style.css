@@ -147,44 +147,83 @@ main {
   text-decoration: none;
 }
 
-a {
+.button {
+  padding: 20px;
   padding: 0.1em 0.25em;
-  width: 6em;
-  height: 3.2em;
-  background-color: #0a192f;
-  border: 0.08em solid #fff;
+  width: 13em;
+  height: 4.2em;
+  background-color: #212121;
+  border: 0.08em solid #64ffda;
   border-radius: 0.3em;
-  font-size: 12px;
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  
+  font-size: 10px;
 }
 
-a span {
+.button span {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   bottom: 0.4em;
-  width: 5.25em;
+  width: 8.25em;
   height: 2.5em;
-  background-color: #0a192f;
+  background-color: #212121;
   border-radius: 0.2em;
-  font-size: 1em;
+  font-size: 1.5em;
   color: #fff;
-  border: 0.08em solid #fff;
+  border: 0.08em solid #64ffda;
   box-shadow: 0 0.4em 0.1em 0.019em #fff;
-  transition: all 0.5s;
+  
 }
-
-a span:hover {
+a{
+  text-decoration: none;
+}
+.button span:hover {
+  transition: all 0.3s;
   transform: translate(0, 0.4em);
   box-shadow: 0 0 0 0 #fff;
-   color: #64ffda;
+  
+}
+
+.button span:not(hover) {
+  transition: all 1s;
 }
 
 
-a span:not(:hover) {
-  transition: all 1s;
+.social-media{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+  
+  
+}
+
+
+.fa-brands, .fa-solid{
+  margin: 20px;
+ color: rgb(139, 138, 138);
+ transition: opacity 0.2s ease, color 0.3s ease, transform 0.3s ease;
+}
+.fa-brands:hover{
+  color: #64ffda;
+  cursor: pointer;
+  transform: translateY(-3px);
+
+}
+.fa-solid:hover{
+  color: #64ffda;
+  cursor: pointer;
+  transform: translateY(-3px);
+}
+.get-inTouch{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  color: #8892b0;
+
 }
