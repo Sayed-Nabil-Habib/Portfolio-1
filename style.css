@@ -26,15 +26,13 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  
+ 
+ 
   
 }
 
-.main-content {
-  max-width: 800px;
-  border-left: solid 0.2rem #606060d2;
-  border-right: solid 0.2rem #606060d2;
-}
+
 
 .section-first {
   position: relative;
@@ -42,20 +40,28 @@ main {
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  max-width: 600px;
   color: #8892b0;
   line-height: 1.5;
   padding: 0 30px 0 30px;
+  margin-top: 100px
+
 }
 
 .section-first > div {
   font-size: 2rem;
   line-height: 1;
-}
 
-.section-first > h1 {
-  color: var(color);
+}
+.name{
+  color: #ccd6f6;
+}
+.hi{
+  color: #64ffda;
+}
+.section-first  h2 {
   align-self: flex-start;
+  
 }
 .section-second > h1{
   color: #8892b0;
@@ -90,10 +96,7 @@ main {
   z-index: 2;
 }
 
-/* .project-card:hover::before {
-  opacity: 0;
 
-} */
 
 .project-image {
   position: absolute;
@@ -226,4 +229,40 @@ a{
   padding: 20px;
   color: #8892b0;
 
+}
+.get-inTouch h1 {
+  color: #ccd6f6;
+
+}
+
+
+@media (min-width: 800px) {
+
+body{
+ 
+}
+main{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  
+
+}
+.section-first {
+  margin-bottom: 100px;
+  max-width: 850px;
+  color: #8892b0;
+  line-height: 1.5;
+  padding: 0 30px 0 30px;
+  
+}
+
+.section-first > div {
+  font-size: 2.6rem;
+  line-height: 1;
+}
+.section-first > p{
+  max-width: 500px;
+}
 }
