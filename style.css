@@ -135,28 +135,32 @@ main {
   justify-content: center;
   align-items: center;
 }
-.project-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
+
+
+
+
+.card-text{
+  padding: 20px;
+}
+@media (max-width: 767px) {
+  .page {
+    height: auto;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+}
+.container {
   position: relative;
   transform: translateY(100%);
   transition: transform 0.5s;
-  max-width: 400px;
-  max-height: 600px;
-  background-color: #fff;
-  border-radius: 14px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  margin: 20px;
-
-}
-.project-card {
   opacity: 0;
   transform: translateY(50px);
+  display: flex;
+  height: 335px;
+  margin: 0 auto;
+  width: 640px;
+  margin-bottom: 20px;
 }
-
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -171,75 +175,130 @@ main {
 .animate-fade-in {
   animation: fade-in 0.6s ease forwards;
 }
-
-
-.project-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #0a192f9f;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-  z-index: 2;
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    height: 630px;
+    width: 320px;
+  }
+}
+.left {
+  background: white;
+  height: calc(100% - 40px);
+  top: 20px;
+  position: relative;
+  width: 50%;  
 }
 
-
-
-.project-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1; 
-  opacity: 0.4;
-}
-.project-details {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: first baseline;
-  align-items: flex-start;
-  text-transform: capitalize;
-  line-height: 2;
-  padding: 10px;
-  color: #8892b0;
-  opacity: 1;
-  transition: opacity 0.3s ease, color 0.3s ease;
-  z-index: 4;
-  text-align: center;
-}
-
-.project-card:hover .project-details {
-  opacity: 1;
-  color: #64ffda;
-}
-
-.project-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 8px;
+.left{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   
 }
 
-.project-description {
+.left-first{
+  background-image: url('./materials/project-exam-1.png');
+ 
+  
+}
+.left-second{
+  background-image: url('./materials/semester-project-1.png');
+ 
+}
+.left-third{
+  background-image: url('./materials/cross-courese-project.png');
+ 
+}
+
+@media (max-width: 767px) {
+  .left {
+    display: none;
+  }
+}
+.container{
+  height: 340px;
+}
+.login {
+  font-size: 50px;
+  font-weight: 900;
+  margin: 50px 40px 40px;
+}
+.eula {
+  color: #999;
   font-size: 14px;
-  
+  line-height: 1.5;
+  margin: 40px;
+}
+.right {
+  background: #474A59;
+  box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
+  color: #F1F1F2;
+  position: relative;
+  width: 50%;
 }
 
-.github-link {
-  display: inline-block;
-  margin-top: 16px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #8892b0;
-  text-decoration: none;
+@media (max-width: 767px) {
+  .right {
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+    max-height: 350px;
+  }
 }
+
+svg {
+  position: absolute;
+  width: 320px;
+}
+path {
+  fill: none;
+  stroke: url(#linearGradient);;
+  stroke-width: 4;
+  stroke-dasharray: 240 1386;
+}
+.form {
+  margin: 40px;
+  position: absolute;
+}
+label {
+  color:  #c2c2c5;
+  display: block;
+  font-size: 14px;
+  height: 16px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+input {
+  background: transparent;
+  border: 0;
+  color: #f2f2f2;
+  font-size: 20px;
+  height: 30px;
+  line-height: 30px;
+  outline: none !important;
+  width: 100%;
+}
+input::-moz-focus-inner { 
+  border: 0; 
+}
+#submit {
+  color: #707075;
+  margin-top: 40px;
+  transition: color 300ms;
+}
+#submit:focus {
+  color: #f2f2f2;
+}
+#submit:active {
+  color: #d0d0d2;
+}
+
+
+
+
+
+
 
 .button {
   padding: 20px;
@@ -329,9 +388,7 @@ a{
 
 @media (min-width: 1050px) {
 
-body{
- 
-}
+
 main{
   display: flex;
   flex-direction: column;
@@ -356,17 +413,5 @@ main{
 .section-first > p{
   max-width: 500px;
 }
-.card-holder{
-  max-width: 1000px;
-  display: flex;
-  flex-direction: row;
-  
-}
-.project-card {
-  width: 400px;
-  height: 250px;
-  max-width: 100%;
-  max-height: 100%;
- 
-}
+
 }

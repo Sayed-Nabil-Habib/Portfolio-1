@@ -1,4 +1,4 @@
-const cardContainers = document.querySelectorAll(".project-card");
+const cardContainers = document.querySelectorAll(".container");
 
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
