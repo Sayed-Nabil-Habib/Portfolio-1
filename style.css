@@ -296,7 +296,12 @@ input::-moz-focus-inner {
 
 
 
-
+.section-third{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+}
 
 
 
