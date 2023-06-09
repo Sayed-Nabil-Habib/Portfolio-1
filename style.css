@@ -177,6 +177,7 @@ Say Hello button
   border: 0.08em solid var(--light-green);
   border-radius: 0.3em;
   font-size: 10px;
+  margin: 20px;
 }
 
 .button span {
@@ -227,17 +228,19 @@ Social media icons
  transition: opacity 0.2s ease, color 0.3s ease, transform 0.3s ease;
  z-index: 2;
 }
+
 .fa-brands:hover{
   color: var(--light-green);
   cursor: pointer;
   transform: translateY(-3px);
-
 }
+
 .fa-solid:hover{
   color: var(--light-green);
   cursor: pointer;
   transform: translateY(-3px);
 }
+
 .get-inTouch, .skills{
   display: flex;
   flex-direction: column;
@@ -248,8 +251,8 @@ Social media icons
   margin: 20px auto;
   padding: 20px;
   color: var(--light-blue);
-
 }
+
 .skills{
   color: var(--light-blue);
 }
@@ -257,7 +260,9 @@ Social media icons
   color: var(--light-blue);
 }
 
-
+footer{
+  padding: 100px;
+}
 /*
 meida 
 */
