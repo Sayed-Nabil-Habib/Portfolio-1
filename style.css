@@ -127,6 +127,7 @@ main {
 /*
 Second Section 
 */
+
 .section-second > h1{
   color: var(--light-blue);
   display: flex;
@@ -249,7 +250,6 @@ Social media icons
   text-align: center;
   max-width: 500px;
   margin: 20px auto;
-  padding: 20px;
   color: var(--light-blue);
 }
 
@@ -261,7 +261,7 @@ Social media icons
 }
 
 footer{
-  padding: 100px;
+  padding: 0 0 100px 0;
 }
 /*
 meida 
