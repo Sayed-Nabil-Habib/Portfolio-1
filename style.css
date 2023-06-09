@@ -154,7 +154,7 @@ main {
   flex-wrap: wrap;
   width: 20px;
   height: 20px;
-  padding: 10px;
+ 
 }
 
 
@@ -212,8 +212,9 @@ a{
 
 .fa-brands, .fa-solid{
   margin: 20px;
- color: rgb(139, 138, 138);
+ color: #64ffda;
  transition: opacity 0.2s ease, color 0.3s ease, transform 0.3s ease;
+ z-index: 2;
 }
 .fa-brands:hover{
   color: #64ffda;
