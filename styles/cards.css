@@ -1,5 +1,17 @@
-html {
+html, body {
   box-sizing: border-box;
+}
+:root{
+  --transform-100:translateY(100%);
+  --transform-50:translateY(50px);
+  --transform-0:translateY(0);
+  --transition:0.5s ;
+  --background-color-light-mode:white;
+  --light-green:#64ffda;
+  --background-color:#112240;
+  --box-shadow:0px 0px 40px 16px rgba(0,0,0,0.22);
+  --border-radius: 5px;
+ 
 }
 .section-second{
   display: flex;
@@ -11,6 +23,7 @@ html {
 .card-text{
   padding: 20px;
 }
+
 @media (max-width: 767px) {
   .page {
     height: auto;
@@ -20,12 +33,11 @@ html {
 }
 .container {
   position: relative;
-  transform: translateY(100%);
-  transition: transform 0.5s;
+  transform: var(--transform-100);
+  transition: var(--transition);
   opacity: 0;
-  transform: translateY(50px);
+  transform: var(--transform-50);
   display: flex;
- 
   margin: 0 auto;
   max-width: 640px;
   margin-bottom: 50px;
@@ -35,11 +47,11 @@ html {
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(50px);
+    transform: var(--transform-50);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: var(--transform-0);
   }
 }
 
@@ -55,21 +67,20 @@ html {
     max-width: 620px ;
   }
 }
+
+/*
+left card style on big screen
+*/
+
 .left {
-  background: white;
-  height: calc(100% - 40px);
-  top: 20px;
+  top: 30px;
   position: relative;
   width: 50%;  
-  border-radius: 5px 0 0 5px;  
-}
- 
-
-.left{
+  border-radius: 5px 0 0 5px; 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  
+  height: 230px;
 }
 
 .left-first {
@@ -101,8 +112,8 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #64ffda; 
-  opacity: 0.5;
+  background-color: var(--light-green); 
+  opacity: 0.3;
   transition: opacity 0.3s ease;
   border-radius: 5px;
 }
@@ -122,85 +133,68 @@ html {
 
 
 @media (max-width: 767px) {
+
+  /*
+  left card style on small screens
+  */
+  
   .left {
     display: none;
   }
 
 }
-.left{
-  height: 230px;
-}
-.login {
-  font-size: 50px;
-  font-weight: 900;
-  margin: 50px 40px 40px;
-}
-.eula {
-  color: #999;
-  font-size: 14px;
-  line-height: 1.5;
-  margin: 40px;
-}
+
+
+/*
+Right card on big screen style
+*/
+
 .right {
-  background: #112240;
-  box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
+  background: var(--background-color);
+  box-shadow: var(--box-shadow);
   color: #F1F1F2;
   position: relative;
   width: 70%;
-  border-radius: 5px;
- 
-  
- 
-  
+  border-radius: var(--border-radius);
 }
+
 .card-text p{
  font-weight: 200;
  font-size: 14px;
 
 }
 
-.right{
-  background-image: url(../materials/project-exam-1-modified_200_3_1000x468_200.png);
- 
-}
+
 @media (max-width: 767px) {
+
+  /*
+  right card style here
+  */
+
   .right {
     flex-shrink: 0;
     height: 100%;
     width: 100%;
-   
-    background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  }
-  
-
-
-  .right-first {
-    position: relative;
-    background-image: url('../materials/project-exam-1-modified_200_3_1000x468_200.png');
-  }
-  
-  .right-second{
-    background-image: url('../materials/semester-project-1-modified_200_3_1000x468_200.png');
-   
-  }
-  .card-text p{
-    line-height: 2;
-    
-  }
-  .right-third{
-    background-image: url('../materials/cross-courese-project-modified_200_5_1000x468_200.png');
-   
-  }
-  .right {
-    flex-shrink: 1;
-    width: 100%;
-    max-height: 550px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
+  .right-first {
+    position: relative;
+    background-image: url('../materials/project-exam-1-modified_200_3_1000x468_200.png');
+  }
+  .right-second{
+    background-image: url('../materials/semester-project-1-modified_200_3_1000x468_200.png');
+  }
+  
+  .right-third{
+    background-image: url('../materials/cross-courese-project-modified_200_5_1000x468_200.png');
+   
+  }
+  .card-text p{
+    line-height: 2;
+  }
+ 
   
   .right-first,
   .right-second,
@@ -217,18 +211,18 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #0a192f;
+    background-color: var(--background-color);
     opacity: 0.9;
     transition: opacity 0.3s ease;
     height: 100% auto;
     pointer-events: none;
   }
   .right-first,
-.right-second,
-.right-third {
+  .right-second,
+  .right-third {
   background-color: transparent;
   position: relative;
-  overflow: hidden; /* Add this line to hide overflowing content */
+  overflow: hidden;
 }
   .right-first:hover::before,
   .right-second:hover::before,
@@ -247,16 +241,12 @@ html {
     color: #64ffda;
   }
   .right-first a,
-.right-second a,
-.right-third a {
-  z-index: 3;
+  .right-second a,
+  .right-third a {
+   z-index: 3;
   position: relative;
 }
  
-  
-  
-
-  
 
 }
 
@@ -266,6 +256,11 @@ html {
  }
  
 }
+
+/*
+right card icons styles
+*/
+
 .right-first,
 .right-second,
 .right-third {
@@ -293,49 +288,3 @@ html {
 }
 
 
-svg {
-  position: absolute;
-  width: 320px;
-}
-path {
-  fill: none;
-  stroke: url(#linearGradient);;
-  stroke-width: 4;
-  stroke-dasharray: 240 1386;
-}
-.form {
-  margin: 40px;
-  position: absolute;
-}
-label {
-  color:  #c2c2c5;
-  display: block;
-  font-size: 14px;
-  height: 16px;
-  margin-top: 20px;
-  margin-bottom: 5px;
-}
-input {
-  background: transparent;
-  border: 0;
-  color: #f2f2f2;
-  font-size: 20px;
-  height: 30px;
-  line-height: 30px;
-  outline: none !important;
-  width: 100%;
-}
-input::-moz-focus-inner { 
-  border: 0; 
-}
-#submit {
-  color: #707075;
-  margin-top: 40px;
-  transition: color 300ms;
-}
-#submit:focus {
-  color: #f2f2f2;
-}
-#submit:active {
-  color: #d0d0d2;
-}

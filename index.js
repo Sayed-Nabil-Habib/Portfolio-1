@@ -4,6 +4,7 @@ const sectionFirst = document.querySelector(".section-first");
 const sectionSecond = document.querySelector(".section-second");
 const getInTouch = document.querySelector(".get-inTouch");
 const cardTexts = document.querySelectorAll(".card-text");
+const skills = document.querySelectorAll(".skills");
 
 const sectionFirstText = sectionFirst.querySelectorAll("p, h2");
 const sectionSecondText = sectionSecond.querySelectorAll("h1, h2");
@@ -23,6 +24,10 @@ checkbox.addEventListener('change', function() {
       element.style.transition = 'color 0.3s ease';
     });
     getInTouchText.forEach(element => {
+      element.style.color = '#0a192f';
+      element.style.transition = 'color 0.3s ease';
+    });
+    skills.forEach(element => {
       element.style.color = '#0a192f';
       element.style.transition = 'color 0.3s ease';
     });
@@ -49,6 +54,10 @@ checkbox.addEventListener('change', function() {
       element.style.transition = 'color 0.3s ease';
     });
     cardTextContent.forEach(element => {
+      element.style.color = '';
+      element.style.transition = 'color 0.3s ease';
+    });
+    skills.forEach(element => {
       element.style.color = '';
       element.style.transition = 'color 0.3s ease';
     });
