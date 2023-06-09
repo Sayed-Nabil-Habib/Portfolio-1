@@ -22,10 +22,11 @@
   opacity: 0;
   transform: translateY(50px);
   display: flex;
-  height: 335px;
+  max-height: 435px;
   margin: 0 auto;
-  width: 640px;
-  margin-bottom: 20px;
+  max-width: 640px;
+  margin-bottom: 50px;
+  padding: 0 20px 0 20px ;
 }
 @keyframes fade-in {
   from {
@@ -41,11 +42,13 @@
 .animate-fade-in {
   animation: fade-in 0.6s ease forwards;
 }
+
+
 @media (max-width: 767px) {
   .container {
     flex-direction: column;
-    height: 630px;
-    width: 320px;
+    max-height: 680px;
+    max-width: 620px ;
   }
 }
 .left {
@@ -135,7 +138,13 @@
   box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
   color: #F1F1F2;
   position: relative;
-  width: 50%;
+  width: 70%;
+ 
+  
+}
+.card-text p{
+ font-weight: 200;
+ font-size: 14px;
 }
 .right{
   background-image: url(../materials/project-exam-1-modified_200_3_1000x468_200.png);
@@ -145,7 +154,7 @@
     flex-shrink: 0;
     height: 100%;
     width: 100%;
-    max-height: 350px;
+    max-height: 380px;
     background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -160,6 +169,10 @@
   .right-second{
     background-image: url('../materials/semester-project-1-modified_200_3_1000x468_200.png');
    
+  }
+  .card-text p{
+    line-height: 2;
+    
   }
   .right-third{
     background-image: url('../materials/cross-courese-project-modified_200_5_1000x468_200.png');
@@ -231,6 +244,31 @@
   background-image: none;
  }
  
+}
+.right-first,
+.right-second,
+.right-third {
+  position: relative;
+}
+
+.right-first .card-text,
+.right-second .card-text,
+.right-third .card-text {
+  margin-bottom: 30px;
+}
+
+.right-first a,
+.right-second a,
+.right-third a {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+}
+
+.right-first a:nth-of-type(2),
+.right-second a:nth-of-type(2),
+.right-third a:nth-of-type(2) {
+  left: 40px;
 }
 
 
